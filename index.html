@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Formulário de inscrição</title>
   </head>
   <body>
@@ -18,8 +19,8 @@
           <p class="header-paragraph">Prazo para responder: <span>05/05/2025</span></p>
         </div>
 
-        <div>
-          <img id="change-mode" src="public/images/themeIcon.png" alt="Simbolo de modo escuro" class="dark-mode-icon" onclick="changeMode()"/>
+        <div class="theme-toggle">
+          <span class="material-icons" id="theme-icon">dark_mode</span>
         </div>
       </header>
       
@@ -56,16 +57,13 @@
           <label for="course"><span>*</span> Curso:</label>
             <select name="course" id="course" class="course">
               <option value="" selected>Selecione um curso</option>
-              <option value="html-css">HTML e CSS</option>
-              <option value="javascript">JavaScript</option>
+              <option value="html-css">Mongo</option>
+              <option value="javascript">Nest</option>
               <option value="react">React</option>
-              <option value="nodejs">Node.js</option>
+              <option value="nodejs">Node</option>
               <option value="python">Python</option>
               <option value="sql">SQL</option>
-              <option value="java">Java</option>
-              <option value="typescript">TypeScript</option>
-              <option value="git-github">Git e GitHub</option>
-              <option value="ui-ux">UI/UX Design</option>
+              <option value="ui-ux">UI UX Design</option>
             </select>
         </div>
 
@@ -83,11 +81,17 @@
           <p>Os campos marcados com <span>*</span> são obrigatórios</p>
         </div>
 
-        <div>
-          <button type="submit" id="button">Realizar inscrição</button>
+        <div class="button-section">
+          <div>
+            <button type="submit" id="button">Confirmar</button>
+          </div>
+
+          <div>
+            <button type="button" id="btnInscrios">Ver inscritos</button>
+          </div>
         </div>
       </form>
     </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
-</html>
+</html> 

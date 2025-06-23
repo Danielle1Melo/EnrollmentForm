@@ -44,12 +44,11 @@ header {
 }
 
 .dark-mode-icon {
-  size: 4px;
   cursor: pointer;
   width: 64%;
 }
 
-form {
+form, .container-data {
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -58,7 +57,7 @@ form {
   width: 100%;
 }
 
-.input-section {
+.input-section, .data {
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -87,7 +86,6 @@ form span {
   color: #F42E31;
 }
 
-/* todo: change the round border */
 .gender {
   display: flex;
   flex-direction: column;
@@ -130,6 +128,12 @@ input[type="radio"] {
   font-weight: 300;
 }
 
+.button-section {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
 button {
   padding: 12px 24px;
   border-radius: 8px;
@@ -149,36 +153,46 @@ body.dark-mode {
   background-color: black;
   color: #FCFDFC
 }
-/* 
-input,
-form select,
-textarea {
+
+body.dark-mode .input-section input,
+body.dark-mode .input-section select,
+body.dark-mode .input-section textarea {
   background-color: #1E1E1E;
-  color: #8F8D99;
-} */
-
-header.dark-mode {
-  background-color: #373636;
+  color: #FFFFFF;
+  border-color: #555555;
 }
 
-.input-section.dark-mode {
-  background-color: #373636;
+/* data.html */
+.data span {
+  font-weight: 400;
+  margin-left: 4px;
 }
 
-.input-section input.dark-mode,
-.input-section select.dark-mode,
-.input-section textarea.dark-mode {
-  background-color: #1E1E1E;
+.container-data {
+  gap: 16px;
 }
 
-.gender.dark-mode {
-  background-color: #373636;
+.button-form {
+  display: flex;
+  justify-content: flex-start;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
 }
 
-form select.dark-mode {
-  background-color: #1E1E1E;
+.button-link {
+  text-decoration: none;
+  color: #FBFCFF;
 }
 
-.terms.dark-mode {
-  background-color: #373636;
+.data {
+  flex-direction: row;
+  justify-content: space-between;
+  line-height: 100%;
+}
+
+.data > div {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
